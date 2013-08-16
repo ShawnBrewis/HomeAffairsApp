@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://xml-fx.com/services/SAIDValidator/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://xml-fx.com/services/SAIDValidator/said.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://xml-fx.com/services/SAIDValidator/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://xml-fx.com/services/SAIDValidator/">
+      <s:import namespace="http://xml-fx.com/services/SAIDValidator/said.xsd" />
+      <s:element name="GetServiceIdentifier">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServiceIdentifierResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceIdentifierResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateIdString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="said" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateIdStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:said" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://xml-fx.com/services/SAIDValidator/said.xsd">
+      <s:element name="said" type="s1:saidType" />
+      <s:complexType name="saidType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Input" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="output">
+            <s:complexType>
+              <s:sequence>
+                <s:element minOccurs="1" maxOccurs="1" name="CCD" type="s:int" />
+                <s:element minOccurs="1" maxOccurs="1" name="CD" type="s:int" />
+                <s:element minOccurs="1" maxOccurs="1" name="Citizen">
+                  <s:simpleType>
+                    <s:restriction base="s:string">
+                      <s:enumeration value="Unknown" />
+                      <s:enumeration value="SA" />
+                      <s:enumeration value="Foreign" />
+                    </s:restriction>
+                  </s:simpleType>
+                </s:element>
+                <s:element minOccurs="1" maxOccurs="1" name="DOB" type="s:date" />
+                <s:element minOccurs="0" maxOccurs="1" name="ErrorFlags" type="s:string" />
+                <s:element minOccurs="1" maxOccurs="1" name="Gender">
+                  <s:simpleType>
+                    <s:restriction base="s:string">
+                      <s:enumeration value="Unknown" />
+                      <s:enumeration value="Female" />
+                      <s:enumeration value="Male" />
+                    </s:restriction>
+                  </s:simpleType>
+                </s:element>
+                <s:element minOccurs="0" maxOccurs="1" name="Parsed" type="s:string" />
+                <s:element minOccurs="1" maxOccurs="1" name="Sequence" type="s:unsignedInt" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+        <s:attribute form="unqualified" name="Valid" type="s:boolean" />
+        <s:attribute form="unqualified" name="Error" type="s:unsignedInt" />
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServiceIdentifierSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceIdentifier" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceIdentifierSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceIdentifierResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateIdStringSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateIdString" />
+  </wsdl:message>
+  <wsdl:message name="ValidateIdStringSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateIdStringResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SAIDValidatorSoap">
+    <wsdl:operation name="GetServiceIdentifier">
+      <wsdl:input message="tns:GetServiceIdentifierSoapIn" />
+      <wsdl:output message="tns:GetServiceIdentifierSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIdString">
+      <wsdl:input message="tns:ValidateIdStringSoapIn" />
+      <wsdl:output message="tns:ValidateIdStringSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SAIDValidatorSoap" type="tns:SAIDValidatorSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceIdentifier">
+      <soap:operation soapAction="http://xml-fx.com/services/SAIDValidator/GetServiceIdentifier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIdString">
+      <soap:operation soapAction="http://xml-fx.com/services/SAIDValidator/ValidateIdString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SAIDValidatorSoap12" type="tns:SAIDValidatorSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceIdentifier">
+      <soap12:operation soapAction="http://xml-fx.com/services/SAIDValidator/GetServiceIdentifier" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIdString">
+      <soap12:operation soapAction="http://xml-fx.com/services/SAIDValidator/ValidateIdString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SAIDValidator">
+    <wsdl:port name="SAIDValidatorSoap" binding="tns:SAIDValidatorSoap">
+      <soap:address location="http://xml-fx.com/services/SAIDValidator/saidvalidator.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SAIDValidatorSoap12" binding="tns:SAIDValidatorSoap12">
+      <soap12:address location="http://xml-fx.com/services/SAIDValidator/saidvalidator.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

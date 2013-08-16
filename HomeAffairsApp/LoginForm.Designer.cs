@@ -33,7 +33,7 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtBxPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.linkLableRegister = new System.Windows.Forms.LinkLabel();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUser
@@ -71,23 +71,23 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(47, 131);
+            this.btnLogin.Location = new System.Drawing.Point(56, 131);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(178, 30);
+            this.btnLogin.Size = new System.Drawing.Size(75, 30);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // linkLableRegister
+            // btnRegister
             // 
-            this.linkLableRegister.AutoSize = true;
-            this.linkLableRegister.Location = new System.Drawing.Point(113, 185);
-            this.linkLableRegister.Name = "linkLableRegister";
-            this.linkLableRegister.Size = new System.Drawing.Size(46, 13);
-            this.linkLableRegister.TabIndex = 5;
-            this.linkLableRegister.TabStop = true;
-            this.linkLableRegister.Text = "Register";
-            this.linkLableRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLableRegister_LinkClicked);
+            this.btnRegister.Location = new System.Drawing.Point(150, 131);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(75, 30);
+            this.btnRegister.TabIndex = 5;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // LoginForm
             // 
@@ -95,15 +95,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.linkLableRegister);
+            this.ClientSize = new System.Drawing.Size(284, 200);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtBxPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,6 +118,6 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtBxPassword;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.LinkLabel linkLableRegister;
+        private System.Windows.Forms.Button btnRegister;
     }
 }

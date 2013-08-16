@@ -9,24 +9,19 @@ using System.Windows.Forms;
 
 namespace HomeAffairsApp
 {
-    public partial class LoginForm : Form
+    public partial class BirthForm : Form
     {
-        public LoginForm()
+        public BirthForm()
         {
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void BirthForm_Load(object sender, EventArgs e)
         {
-            this.Dispose();
+
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
