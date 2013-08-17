@@ -11,39 +11,37 @@ namespace HomeAffairsApp
 {
     public partial class RegisterForm : Form
     {
-        //LoginForm userLogin = new LoginForm();
-
         public RegisterForm()
         {
             InitializeComponent();
         }
 
-        public string FirstName()
+        public string getFirstName()
         {
             return txtBxFirstName.Text;
         }
 
-        public string LastName()
+        public string getLastName()
         {
             return txtBxLastName.Text;
         }
 
-        public string Address()
+        public string getAddress()
         {
             return txtBxAddress.Text;
         }
 
-        public string Province()
+        public string getProvince()
         {
             return cmBxProvince.SelectedItem.ToString();
         }
 
-        public string City()
+        public string getCity()
         {
             return cmBxCity.SelectedItem.ToString();
         }
 
-        public string BirthDate()
+        public string getBirthDate()
         {
             return cmBxYear.SelectedItem.ToString() + "" + cmBxMonth.SelectedItem.ToString() + "" + cmBxDay.SelectedItem.ToString();
         }
@@ -51,7 +49,7 @@ namespace HomeAffairsApp
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
-            ResetMyForm();
+            ResetMyDate();
         }
 
         private void cmBxMonth_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,7 +69,7 @@ namespace HomeAffairsApp
             else
             {
                 MessageBox.Show("Please select a year first");
-                ResetMyForm();
+                ResetMyDate();
             }
             
             //First clear the items in the combo box
@@ -84,7 +82,7 @@ namespace HomeAffairsApp
             }
         }
 
-        private void ResetMyForm()
+        private void ResetMyDate()
         {   
             //First clear the combo box's before populating them
             cmBxMonth.Items.Clear();
@@ -113,18 +111,28 @@ namespace HomeAffairsApp
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            LoginForm userLogin = new LoginForm();
-            userLogin.ShowDialog();
+            this.Hide(); 
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            
+            if (txtBxFirstName.Text == "" || txtBxLastName.Text == "" || txtBxAddress.Text == "" ||
+                txtBxEmail.Text == "" || cmBxDay.Items.ToString() == "" || cmBxMonth.Items.ToString() == "" ||
+                cmBxYear.Items.ToString() == "" || cmBxCity.Items.ToString() == "" || rbMale.Enabled == false || rbFemale.Enabled == false)
+            {
+                MessageBox.Show("Error: Please fill all the fields before clicking on 'Register'");
+            }
         }
 
         private void txtBxLastName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmBxYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmBxDay.Text = "";
+            cmBxMonth.Text = "";
         }
     }
 }

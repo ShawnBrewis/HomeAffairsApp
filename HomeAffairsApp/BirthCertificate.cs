@@ -10,7 +10,5 @@ namespace HomeAffairsApp
         public BirthCertificate()
         {
         }
-
-
     }
 }

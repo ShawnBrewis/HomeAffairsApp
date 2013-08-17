@@ -18,7 +18,7 @@ namespace HomeAffairsApp
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -29,6 +29,11 @@ namespace HomeAffairsApp
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void showForm()
+        {
+           this.ShowDialog();
         }
     }
 }

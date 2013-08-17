@@ -118,6 +118,7 @@
             this.cmBxYear.Name = "cmBxYear";
             this.cmBxYear.Size = new System.Drawing.Size(51, 21);
             this.cmBxYear.TabIndex = 7;
+            this.cmBxYear.SelectedIndexChanged += new System.EventHandler(this.cmBxYear_SelectedIndexChanged);
             // 
             // cmBxMonth
             // 

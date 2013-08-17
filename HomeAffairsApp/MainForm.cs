@@ -11,7 +11,12 @@ namespace HomeAffairsApp
 {
     public partial class MainForm : Form
     {
+        //-- Create Form Objects --//
+        RegisterForm myRegForm = new RegisterForm();
+        LoginForm myLogin = new LoginForm();
         BirthForm userBirth = new BirthForm();
+        MarriageForm userMarriage = new MarriageForm();
+        DeathForm userDeath = new DeathForm();
 
         public MainForm()
         {
@@ -20,11 +25,6 @@ namespace HomeAffairsApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {   
-            //-- Create Form Objects --//
-            RegisterForm myRegForm = new RegisterForm();
-            LoginForm myLogin = new LoginForm();
-            
-
             //--Show Forms--//
             myLogin.ShowDialog();
             myRegForm.ShowDialog();
@@ -44,6 +44,18 @@ namespace HomeAffairsApp
         private void btnBirth_Click(object sender, EventArgs e)
         {
             userBirth.ShowDialog();
+            BirthCertificate myCert = new BirthCertificate();
+            
+        }
+
+        private void btnMarriage_Click(object sender, EventArgs e)
+        {
+            userMarriage.ShowDialog();
+        }
+
+        private void btnID_Click(object sender, EventArgs e)
+        {
+            userDeath.ShowDialog();
         }
     }
 }

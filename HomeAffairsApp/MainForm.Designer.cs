@@ -136,6 +136,7 @@
             this.btnMarriage.TabIndex = 3;
             this.btnMarriage.Text = "Marriage Certificate";
             this.btnMarriage.UseVisualStyleBackColor = true;
+            this.btnMarriage.Click += new System.EventHandler(this.btnMarriage_Click);
             // 
             // btnID
             // 
@@ -143,16 +144,17 @@
             this.btnID.Name = "btnID";
             this.btnID.Size = new System.Drawing.Size(141, 82);
             this.btnID.TabIndex = 2;
-            this.btnID.Text = "ID Book";
+            this.btnID.Text = "Death Certificate";
             this.btnID.UseVisualStyleBackColor = true;
+            this.btnID.Click += new System.EventHandler(this.btnID_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblName);
             this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(23, 49);
+            this.groupBox2.Location = new System.Drawing.Point(12, 49);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(282, 315);
+            this.groupBox2.Size = new System.Drawing.Size(293, 315);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Welcome";
@@ -174,16 +176,16 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(270, 258);
+            this.textBox1.Size = new System.Drawing.Size(281, 258);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Welcome To The South African Department of Home Affairs.\r\n\r\nPlease choose from on" +
-    "e of the options on the right to register for a Birth Certificate, ID book or Ma" +
-    "rriage Certificate.";
+    "e of the options on the right to register for a Birth Certificate, Marriage Cert" +
+    "ificate or a Death Certificate.";
             // 
             // picBxRightHand
             // 
             this.picBxRightHand.Image = ((System.Drawing.Image)(resources.GetObject("picBxRightHand.Image")));
-            this.picBxRightHand.Location = new System.Drawing.Point(311, 138);
+            this.picBxRightHand.Location = new System.Drawing.Point(311, 147);
             this.picBxRightHand.Name = "picBxRightHand";
             this.picBxRightHand.Size = new System.Drawing.Size(100, 47);
             this.picBxRightHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -55,6 +55,12 @@
     <Compile Include="BirthForm.Designer.cs">
       <DependentUpon>BirthForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeathForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeathForm.Designer.cs">
+      <DependentUpon>DeathForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,12 @@
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarriageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarriageForm.Designer.cs">
+      <DependentUpon>MarriageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,11 +96,17 @@
     <EmbeddedResource Include="BirthForm.resx">
       <DependentUpon>BirthForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeathForm.resx">
+      <DependentUpon>DeathForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarriageForm.resx">
+      <DependentUpon>MarriageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

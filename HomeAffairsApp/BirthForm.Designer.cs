@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BirthForm));
             this.grpBxPersonConcerned = new System.Windows.Forms.GroupBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblSurname = new System.Windows.Forms.Label();
@@ -35,61 +36,71 @@
             this.lblForenames = new System.Windows.Forms.Label();
             this.lblDOB = new System.Windows.Forms.Label();
             this.lblTown = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtPersonSurname = new System.Windows.Forms.TextBox();
+            this.txtBxPersonMaiden = new System.Windows.Forms.TextBox();
+            this.txtBxPersonForename = new System.Windows.Forms.TextBox();
+            this.txtBxPersonDOB = new System.Windows.Forms.TextBox();
+            this.txtBxPersonTown = new System.Windows.Forms.TextBox();
             this.grpBxFather = new System.Windows.Forms.GroupBox();
             this.lblSurnameFather = new System.Windows.Forms.Label();
             this.lblFatherForeame = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtBxFatherSurname = new System.Windows.Forms.TextBox();
+            this.txtBxFatherForename = new System.Windows.Forms.TextBox();
             this.grpBxMother = new System.Windows.Forms.GroupBox();
             this.lblMotherMaiden = new System.Windows.Forms.Label();
             this.lblFatherForename = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtBxMotherMaiden = new System.Windows.Forms.TextBox();
+            this.txtBxMotherForename = new System.Windows.Forms.TextBox();
             this.grpBxApplicant = new System.Windows.Forms.GroupBox();
             this.lblApplicantSurname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantSurname = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantForename = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantPostal = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantTelWrk = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantTelHome = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantWrkCode = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantHomeCode = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grpBxPersonConcerned.SuspendLayout();
             this.grpBxFather.SuspendLayout();
             this.grpBxMother.SuspendLayout();
             this.grpBxApplicant.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // grpBxPersonConcerned
             // 
             this.grpBxPersonConcerned.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpBxPersonConcerned.Controls.Add(this.textBox6);
-            this.grpBxPersonConcerned.Controls.Add(this.textBox5);
-            this.grpBxPersonConcerned.Controls.Add(this.textBox4);
-            this.grpBxPersonConcerned.Controls.Add(this.textBox3);
-            this.grpBxPersonConcerned.Controls.Add(this.textBox2);
-            this.grpBxPersonConcerned.Controls.Add(this.textBox1);
+            this.grpBxPersonConcerned.Controls.Add(this.txtBxPersonTown);
+            this.grpBxPersonConcerned.Controls.Add(this.txtBxPersonDOB);
+            this.grpBxPersonConcerned.Controls.Add(this.txtBxPersonForename);
+            this.grpBxPersonConcerned.Controls.Add(this.txtBxPersonMaiden);
+            this.grpBxPersonConcerned.Controls.Add(this.txtPersonSurname);
+            this.grpBxPersonConcerned.Controls.Add(this.txtID);
             this.grpBxPersonConcerned.Controls.Add(this.lblTown);
             this.grpBxPersonConcerned.Controls.Add(this.lblDOB);
             this.grpBxPersonConcerned.Controls.Add(this.lblForenames);
             this.grpBxPersonConcerned.Controls.Add(this.lblMaiden);
             this.grpBxPersonConcerned.Controls.Add(this.lblSurname);
             this.grpBxPersonConcerned.Controls.Add(this.lblID);
-            this.grpBxPersonConcerned.Location = new System.Drawing.Point(64, 12);
+            this.grpBxPersonConcerned.Location = new System.Drawing.Point(190, 12);
             this.grpBxPersonConcerned.Name = "grpBxPersonConcerned";
-            this.grpBxPersonConcerned.Size = new System.Drawing.Size(574, 244);
+            this.grpBxPersonConcerned.Size = new System.Drawing.Size(406, 244);
             this.grpBxPersonConcerned.TabIndex = 0;
             this.grpBxPersonConcerned.TabStop = false;
             this.grpBxPersonConcerned.Text = "Particulars of Person Concerned";
@@ -148,58 +159,58 @@
             this.lblTown.TabIndex = 5;
             this.lblTown.Text = "Town/City and Province of birth:";
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(223, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(273, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtID.Location = new System.Drawing.Point(223, 39);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(161, 20);
+            this.txtID.TabIndex = 6;
             // 
-            // textBox2
+            // txtPersonSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(223, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(273, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtPersonSurname.Location = new System.Drawing.Point(223, 71);
+            this.txtPersonSurname.Name = "txtPersonSurname";
+            this.txtPersonSurname.Size = new System.Drawing.Size(161, 20);
+            this.txtPersonSurname.TabIndex = 7;
             // 
-            // textBox3
+            // txtBxPersonMaiden
             // 
-            this.textBox3.Location = new System.Drawing.Point(223, 103);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(273, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtBxPersonMaiden.Location = new System.Drawing.Point(223, 103);
+            this.txtBxPersonMaiden.Name = "txtBxPersonMaiden";
+            this.txtBxPersonMaiden.Size = new System.Drawing.Size(161, 20);
+            this.txtBxPersonMaiden.TabIndex = 8;
             // 
-            // textBox4
+            // txtBxPersonForename
             // 
-            this.textBox4.Location = new System.Drawing.Point(223, 135);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(273, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtBxPersonForename.Location = new System.Drawing.Point(223, 135);
+            this.txtBxPersonForename.Name = "txtBxPersonForename";
+            this.txtBxPersonForename.Size = new System.Drawing.Size(161, 20);
+            this.txtBxPersonForename.TabIndex = 9;
             // 
-            // textBox5
+            // txtBxPersonDOB
             // 
-            this.textBox5.Location = new System.Drawing.Point(223, 167);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(273, 20);
-            this.textBox5.TabIndex = 10;
+            this.txtBxPersonDOB.Location = new System.Drawing.Point(223, 167);
+            this.txtBxPersonDOB.Name = "txtBxPersonDOB";
+            this.txtBxPersonDOB.Size = new System.Drawing.Size(161, 20);
+            this.txtBxPersonDOB.TabIndex = 10;
             // 
-            // textBox6
+            // txtBxPersonTown
             // 
-            this.textBox6.Location = new System.Drawing.Point(223, 199);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(273, 20);
-            this.textBox6.TabIndex = 11;
+            this.txtBxPersonTown.Location = new System.Drawing.Point(223, 199);
+            this.txtBxPersonTown.Name = "txtBxPersonTown";
+            this.txtBxPersonTown.Size = new System.Drawing.Size(161, 20);
+            this.txtBxPersonTown.TabIndex = 11;
             // 
             // grpBxFather
             // 
             this.grpBxFather.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpBxFather.Controls.Add(this.textBox8);
-            this.grpBxFather.Controls.Add(this.textBox7);
+            this.grpBxFather.Controls.Add(this.txtBxFatherForename);
+            this.grpBxFather.Controls.Add(this.txtBxFatherSurname);
             this.grpBxFather.Controls.Add(this.lblFatherForeame);
             this.grpBxFather.Controls.Add(this.lblSurnameFather);
-            this.grpBxFather.Location = new System.Drawing.Point(64, 268);
+            this.grpBxFather.Location = new System.Drawing.Point(725, 12);
             this.grpBxFather.Name = "grpBxFather";
-            this.grpBxFather.Size = new System.Drawing.Size(574, 100);
+            this.grpBxFather.Size = new System.Drawing.Size(406, 100);
             this.grpBxFather.TabIndex = 1;
             this.grpBxFather.TabStop = false;
             this.grpBxFather.Text = "Particulars of Father";
@@ -222,30 +233,30 @@
             this.lblFatherForeame.TabIndex = 1;
             this.lblFatherForeame.Text = "Forename in full:";
             // 
-            // textBox7
+            // txtBxFatherSurname
             // 
-            this.textBox7.Location = new System.Drawing.Point(229, 39);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(273, 20);
-            this.textBox7.TabIndex = 2;
+            this.txtBxFatherSurname.Location = new System.Drawing.Point(229, 39);
+            this.txtBxFatherSurname.Name = "txtBxFatherSurname";
+            this.txtBxFatherSurname.Size = new System.Drawing.Size(155, 20);
+            this.txtBxFatherSurname.TabIndex = 2;
             // 
-            // textBox8
+            // txtBxFatherForename
             // 
-            this.textBox8.Location = new System.Drawing.Point(229, 69);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(273, 20);
-            this.textBox8.TabIndex = 3;
+            this.txtBxFatherForename.Location = new System.Drawing.Point(229, 69);
+            this.txtBxFatherForename.Name = "txtBxFatherForename";
+            this.txtBxFatherForename.Size = new System.Drawing.Size(155, 20);
+            this.txtBxFatherForename.TabIndex = 3;
             // 
             // grpBxMother
             // 
             this.grpBxMother.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpBxMother.Controls.Add(this.textBox10);
-            this.grpBxMother.Controls.Add(this.textBox9);
+            this.grpBxMother.Controls.Add(this.txtBxMotherForename);
+            this.grpBxMother.Controls.Add(this.txtBxMotherMaiden);
             this.grpBxMother.Controls.Add(this.lblFatherForename);
             this.grpBxMother.Controls.Add(this.lblMotherMaiden);
-            this.grpBxMother.Location = new System.Drawing.Point(64, 380);
+            this.grpBxMother.Location = new System.Drawing.Point(725, 134);
             this.grpBxMother.Name = "grpBxMother";
-            this.grpBxMother.Size = new System.Drawing.Size(574, 107);
+            this.grpBxMother.Size = new System.Drawing.Size(406, 107);
             this.grpBxMother.TabIndex = 2;
             this.grpBxMother.TabStop = false;
             this.grpBxMother.Text = "Particulars of Mother";
@@ -269,40 +280,40 @@
             this.lblFatherForename.TabIndex = 1;
             this.lblFatherForename.Text = "Forename in Full:";
             // 
-            // textBox9
+            // txtBxMotherMaiden
             // 
-            this.textBox9.Location = new System.Drawing.Point(223, 32);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(274, 20);
-            this.textBox9.TabIndex = 2;
+            this.txtBxMotherMaiden.Location = new System.Drawing.Point(223, 32);
+            this.txtBxMotherMaiden.Name = "txtBxMotherMaiden";
+            this.txtBxMotherMaiden.Size = new System.Drawing.Size(161, 20);
+            this.txtBxMotherMaiden.TabIndex = 2;
             // 
-            // textBox10
+            // txtBxMotherForename
             // 
-            this.textBox10.Location = new System.Drawing.Point(223, 68);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(274, 20);
-            this.textBox10.TabIndex = 3;
+            this.txtBxMotherForename.Location = new System.Drawing.Point(223, 68);
+            this.txtBxMotherForename.Name = "txtBxMotherForename";
+            this.txtBxMotherForename.Size = new System.Drawing.Size(161, 20);
+            this.txtBxMotherForename.TabIndex = 3;
             // 
             // grpBxApplicant
             // 
             this.grpBxApplicant.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpBxApplicant.Controls.Add(this.textBox17);
-            this.grpBxApplicant.Controls.Add(this.textBox16);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantHomeCode);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantWrkCode);
             this.grpBxApplicant.Controls.Add(this.label6);
             this.grpBxApplicant.Controls.Add(this.label5);
-            this.grpBxApplicant.Controls.Add(this.textBox15);
-            this.grpBxApplicant.Controls.Add(this.textBox14);
-            this.grpBxApplicant.Controls.Add(this.textBox13);
-            this.grpBxApplicant.Controls.Add(this.textBox12);
-            this.grpBxApplicant.Controls.Add(this.textBox11);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantTelHome);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantTelWrk);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantPostal);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantForename);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantSurname);
             this.grpBxApplicant.Controls.Add(this.label4);
             this.grpBxApplicant.Controls.Add(this.label3);
             this.grpBxApplicant.Controls.Add(this.label2);
             this.grpBxApplicant.Controls.Add(this.label1);
             this.grpBxApplicant.Controls.Add(this.lblApplicantSurname);
-            this.grpBxApplicant.Location = new System.Drawing.Point(64, 499);
+            this.grpBxApplicant.Location = new System.Drawing.Point(190, 286);
             this.grpBxApplicant.Name = "grpBxApplicant";
-            this.grpBxApplicant.Size = new System.Drawing.Size(574, 178);
+            this.grpBxApplicant.Size = new System.Drawing.Size(524, 178);
             this.grpBxApplicant.TabIndex = 1;
             this.grpBxApplicant.TabStop = false;
             this.grpBxApplicant.Text = "Particulars of Applicant";
@@ -352,40 +363,40 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Telephone number (home):";
             // 
-            // textBox11
+            // txtBxApplicantSurname
             // 
-            this.textBox11.Location = new System.Drawing.Point(223, 27);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(273, 20);
-            this.textBox11.TabIndex = 5;
+            this.txtBxApplicantSurname.Location = new System.Drawing.Point(223, 27);
+            this.txtBxApplicantSurname.Name = "txtBxApplicantSurname";
+            this.txtBxApplicantSurname.Size = new System.Drawing.Size(273, 20);
+            this.txtBxApplicantSurname.TabIndex = 5;
             // 
-            // textBox12
+            // txtBxApplicantForename
             // 
-            this.textBox12.Location = new System.Drawing.Point(223, 57);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(273, 20);
-            this.textBox12.TabIndex = 6;
+            this.txtBxApplicantForename.Location = new System.Drawing.Point(223, 57);
+            this.txtBxApplicantForename.Name = "txtBxApplicantForename";
+            this.txtBxApplicantForename.Size = new System.Drawing.Size(273, 20);
+            this.txtBxApplicantForename.TabIndex = 6;
             // 
-            // textBox13
+            // txtBxApplicantPostal
             // 
-            this.textBox13.Location = new System.Drawing.Point(223, 84);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(273, 20);
-            this.textBox13.TabIndex = 7;
+            this.txtBxApplicantPostal.Location = new System.Drawing.Point(223, 84);
+            this.txtBxApplicantPostal.Name = "txtBxApplicantPostal";
+            this.txtBxApplicantPostal.Size = new System.Drawing.Size(273, 20);
+            this.txtBxApplicantPostal.TabIndex = 7;
             // 
-            // textBox14
+            // txtBxApplicantTelWrk
             // 
-            this.textBox14.Location = new System.Drawing.Point(223, 109);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 8;
+            this.txtBxApplicantTelWrk.Location = new System.Drawing.Point(223, 109);
+            this.txtBxApplicantTelWrk.Name = "txtBxApplicantTelWrk";
+            this.txtBxApplicantTelWrk.Size = new System.Drawing.Size(100, 20);
+            this.txtBxApplicantTelWrk.TabIndex = 8;
             // 
-            // textBox15
+            // txtBxApplicantTelHome
             // 
-            this.textBox15.Location = new System.Drawing.Point(223, 135);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 9;
+            this.txtBxApplicantTelHome.Location = new System.Drawing.Point(223, 135);
+            this.txtBxApplicantTelHome.Name = "txtBxApplicantTelHome";
+            this.txtBxApplicantTelHome.Size = new System.Drawing.Size(100, 20);
+            this.txtBxApplicantTelHome.TabIndex = 9;
             // 
             // label5
             // 
@@ -405,29 +416,98 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Telephone Code:";
             // 
-            // textBox16
+            // txtBxApplicantWrkCode
             // 
-            this.textBox16.Location = new System.Drawing.Point(433, 111);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(63, 20);
-            this.textBox16.TabIndex = 11;
+            this.txtBxApplicantWrkCode.Location = new System.Drawing.Point(433, 111);
+            this.txtBxApplicantWrkCode.Name = "txtBxApplicantWrkCode";
+            this.txtBxApplicantWrkCode.Size = new System.Drawing.Size(63, 20);
+            this.txtBxApplicantWrkCode.TabIndex = 11;
             // 
-            // textBox17
+            // txtBxApplicantHomeCode
             // 
-            this.textBox17.Location = new System.Drawing.Point(434, 135);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(63, 20);
-            this.textBox17.TabIndex = 12;
+            this.txtBxApplicantHomeCode.Location = new System.Drawing.Point(434, 135);
+            this.txtBxApplicantHomeCode.Name = "txtBxApplicantHomeCode";
+            this.txtBxApplicantHomeCode.Size = new System.Drawing.Size(63, 20);
+            this.txtBxApplicantHomeCode.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(648, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(648, 134);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 107);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(45, 315);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(136, 121);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(172, 206);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Location = new System.Drawing.Point(725, 335);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(208, 75);
+            this.btnRegister.TabIndex = 7;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(948, 335);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(183, 75);
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // BirthForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(701, 749);
+            this.ClientSize = new System.Drawing.Size(1171, 475);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpBxApplicant);
             this.Controls.Add(this.grpBxMother);
             this.Controls.Add(this.grpBxFather);
             this.Controls.Add(this.grpBxPersonConcerned);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "BirthForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Application for Birth Certificate";
@@ -440,6 +520,10 @@
             this.grpBxMother.PerformLayout();
             this.grpBxApplicant.ResumeLayout(false);
             this.grpBxApplicant.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,36 +537,42 @@
         private System.Windows.Forms.Label lblMaiden;
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBxPersonTown;
+        private System.Windows.Forms.TextBox txtBxPersonDOB;
+        private System.Windows.Forms.TextBox txtBxPersonForename;
+        private System.Windows.Forms.TextBox txtBxPersonMaiden;
+        private System.Windows.Forms.TextBox txtPersonSurname;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.GroupBox grpBxFather;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtBxFatherForename;
+        private System.Windows.Forms.TextBox txtBxFatherSurname;
         private System.Windows.Forms.Label lblFatherForeame;
         private System.Windows.Forms.Label lblSurnameFather;
         private System.Windows.Forms.GroupBox grpBxMother;
         private System.Windows.Forms.Label lblMotherMaiden;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtBxMotherForename;
+        private System.Windows.Forms.TextBox txtBxMotherMaiden;
         private System.Windows.Forms.Label lblFatherForename;
         private System.Windows.Forms.GroupBox grpBxApplicant;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtBxApplicantHomeCode;
+        private System.Windows.Forms.TextBox txtBxApplicantWrkCode;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtBxApplicantTelHome;
+        private System.Windows.Forms.TextBox txtBxApplicantTelWrk;
+        private System.Windows.Forms.TextBox txtBxApplicantPostal;
+        private System.Windows.Forms.TextBox txtBxApplicantForename;
+        private System.Windows.Forms.TextBox txtBxApplicantSurname;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblApplicantSurname;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
