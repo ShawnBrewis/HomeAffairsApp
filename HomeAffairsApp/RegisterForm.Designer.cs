@@ -54,6 +54,15 @@
             this.lblRepeatPassword = new System.Windows.Forms.Label();
             this.txtBxPassword = new System.Windows.Forms.TextBox();
             this.txtBxRepeatPw = new System.Windows.Forms.TextBox();
+            this.lbl = new System.Windows.Forms.Label();
+            this.lblTelHome = new System.Windows.Forms.Label();
+            this.lblTelWrk = new System.Windows.Forms.Label();
+            this.txtBxTelHome = new System.Windows.Forms.TextBox();
+            this.txtBxTelWrk = new System.Windows.Forms.TextBox();
+            this.lblCodeHome = new System.Windows.Forms.Label();
+            this.lblCodeWrk = new System.Windows.Forms.Label();
+            this.txtBxTelCodeHome = new System.Windows.Forms.TextBox();
+            this.txtBxTelCodeWrk = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -163,7 +172,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(155, 436);
+            this.btnRegister.Location = new System.Drawing.Point(155, 510);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(95, 35);
             this.btnRegister.TabIndex = 14;
@@ -173,7 +182,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(260, 436);
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(260, 510);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(95, 35);
             this.btnCancel.TabIndex = 15;
@@ -245,7 +255,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(100, 328);
+            this.lblEmail.Location = new System.Drawing.Point(100, 402);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(76, 13);
             this.lblEmail.TabIndex = 19;
@@ -253,7 +263,7 @@
             // 
             // txtBxEmail
             // 
-            this.txtBxEmail.Location = new System.Drawing.Point(209, 325);
+            this.txtBxEmail.Location = new System.Drawing.Point(208, 399);
             this.txtBxEmail.Name = "txtBxEmail";
             this.txtBxEmail.Size = new System.Drawing.Size(200, 20);
             this.txtBxEmail.TabIndex = 20;
@@ -293,7 +303,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(100, 356);
+            this.lblPassword.Location = new System.Drawing.Point(100, 430);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(56, 13);
             this.lblPassword.TabIndex = 24;
@@ -302,34 +312,117 @@
             // lblRepeatPassword
             // 
             this.lblRepeatPassword.AutoSize = true;
-            this.lblRepeatPassword.Location = new System.Drawing.Point(100, 384);
+            this.lblRepeatPassword.Location = new System.Drawing.Point(100, 458);
             this.lblRepeatPassword.Name = "lblRepeatPassword";
             this.lblRepeatPassword.Size = new System.Drawing.Size(94, 13);
             this.lblRepeatPassword.TabIndex = 25;
             this.lblRepeatPassword.Text = "Repeat Password:";
-            this.lblRepeatPassword.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtBxPassword
             // 
-            this.txtBxPassword.Location = new System.Drawing.Point(209, 353);
+            this.txtBxPassword.Location = new System.Drawing.Point(208, 427);
             this.txtBxPassword.Name = "txtBxPassword";
             this.txtBxPassword.Size = new System.Drawing.Size(200, 20);
             this.txtBxPassword.TabIndex = 26;
-            this.txtBxPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtBxRepeatPw
             // 
-            this.txtBxRepeatPw.Location = new System.Drawing.Point(209, 381);
+            this.txtBxRepeatPw.Location = new System.Drawing.Point(208, 455);
             this.txtBxRepeatPw.Name = "txtBxRepeatPw";
             this.txtBxRepeatPw.Size = new System.Drawing.Size(201, 20);
             this.txtBxRepeatPw.TabIndex = 27;
-            this.txtBxRepeatPw.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Location = new System.Drawing.Point(100, 328);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(61, 13);
+            this.lbl.TabIndex = 28;
+            this.lbl.Text = "Telephone:";
+            // 
+            // lblTelHome
+            // 
+            this.lblTelHome.AutoSize = true;
+            this.lblTelHome.Location = new System.Drawing.Point(167, 328);
+            this.lblTelHome.Name = "lblTelHome";
+            this.lblTelHome.Size = new System.Drawing.Size(35, 13);
+            this.lblTelHome.TabIndex = 29;
+            this.lblTelHome.Text = "Home";
+            // 
+            // lblTelWrk
+            // 
+            this.lblTelWrk.AutoSize = true;
+            this.lblTelWrk.Location = new System.Drawing.Point(167, 359);
+            this.lblTelWrk.Name = "lblTelWrk";
+            this.lblTelWrk.Size = new System.Drawing.Size(33, 13);
+            this.lblTelWrk.TabIndex = 30;
+            this.lblTelWrk.Text = "Work";
+            // 
+            // txtBxTelHome
+            // 
+            this.txtBxTelHome.Location = new System.Drawing.Point(208, 325);
+            this.txtBxTelHome.Name = "txtBxTelHome";
+            this.txtBxTelHome.Size = new System.Drawing.Size(88, 20);
+            this.txtBxTelHome.TabIndex = 31;
+            this.txtBxTelHome.TextChanged += new System.EventHandler(this.txtBxTelHome_TextChanged);
+            // 
+            // txtBxTelWrk
+            // 
+            this.txtBxTelWrk.Location = new System.Drawing.Point(208, 356);
+            this.txtBxTelWrk.Name = "txtBxTelWrk";
+            this.txtBxTelWrk.Size = new System.Drawing.Size(88, 20);
+            this.txtBxTelWrk.TabIndex = 32;
+            this.txtBxTelWrk.TextChanged += new System.EventHandler(this.txtBxTelWrk_TextChanged);
+            // 
+            // lblCodeHome
+            // 
+            this.lblCodeHome.AutoSize = true;
+            this.lblCodeHome.Location = new System.Drawing.Point(306, 328);
+            this.lblCodeHome.Name = "lblCodeHome";
+            this.lblCodeHome.Size = new System.Drawing.Size(35, 13);
+            this.lblCodeHome.TabIndex = 33;
+            this.lblCodeHome.Text = "Code:";
+            // 
+            // lblCodeWrk
+            // 
+            this.lblCodeWrk.AutoSize = true;
+            this.lblCodeWrk.Location = new System.Drawing.Point(306, 359);
+            this.lblCodeWrk.Name = "lblCodeWrk";
+            this.lblCodeWrk.Size = new System.Drawing.Size(35, 13);
+            this.lblCodeWrk.TabIndex = 34;
+            this.lblCodeWrk.Text = "Code:";
+            // 
+            // txtBxTelCodeHome
+            // 
+            this.txtBxTelCodeHome.Location = new System.Drawing.Point(347, 325);
+            this.txtBxTelCodeHome.Name = "txtBxTelCodeHome";
+            this.txtBxTelCodeHome.Size = new System.Drawing.Size(62, 20);
+            this.txtBxTelCodeHome.TabIndex = 35;
+            this.txtBxTelCodeHome.TextChanged += new System.EventHandler(this.txtBxTelCodeHome_TextChanged);
+            // 
+            // txtBxTelCodeWrk
+            // 
+            this.txtBxTelCodeWrk.Location = new System.Drawing.Point(347, 356);
+            this.txtBxTelCodeWrk.Name = "txtBxTelCodeWrk";
+            this.txtBxTelCodeWrk.Size = new System.Drawing.Size(62, 20);
+            this.txtBxTelCodeWrk.TabIndex = 36;
+            this.txtBxTelCodeWrk.TextChanged += new System.EventHandler(this.txtBxTelCodeWrk_TextChanged);
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 509);
+            this.ClientSize = new System.Drawing.Size(510, 551);
+            this.Controls.Add(this.txtBxTelCodeWrk);
+            this.Controls.Add(this.txtBxTelCodeHome);
+            this.Controls.Add(this.lblCodeWrk);
+            this.Controls.Add(this.lblCodeHome);
+            this.Controls.Add(this.txtBxTelWrk);
+            this.Controls.Add(this.txtBxTelHome);
+            this.Controls.Add(this.lblTelWrk);
+            this.Controls.Add(this.lblTelHome);
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.txtBxRepeatPw);
             this.Controls.Add(this.txtBxPassword);
             this.Controls.Add(this.lblRepeatPassword);
@@ -372,27 +465,36 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblDOB;
-        private System.Windows.Forms.TextBox txtBxLastName;
-        private System.Windows.Forms.TextBox txtBxAddress;
-        private System.Windows.Forms.ComboBox cmBxYear;
-        private System.Windows.Forms.ComboBox cmBxMonth;
-        private System.Windows.Forms.ComboBox cmBxDay;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblProvince;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmBxCity;
-        private System.Windows.Forms.ComboBox cmBxProvince;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtBxEmail;
-        public System.Windows.Forms.TextBox txtBxFirstName;
-        private System.Windows.Forms.RadioButton rbMale;
-        private System.Windows.Forms.RadioButton rbFemale;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblRepeatPassword;
         private System.Windows.Forms.TextBox txtBxPassword;
         private System.Windows.Forms.TextBox txtBxRepeatPw;
+        private System.Windows.Forms.TextBox txtBxLastName;
+        private System.Windows.Forms.TextBox txtBxAddress;
+        private System.Windows.Forms.ComboBox cmBxYear;
+        private System.Windows.Forms.ComboBox cmBxMonth;
+        private System.Windows.Forms.ComboBox cmBxDay;
+        private System.Windows.Forms.ComboBox cmBxCity;
+        private System.Windows.Forms.ComboBox cmBxProvince;
+        private System.Windows.Forms.TextBox txtBxEmail;
+        private System.Windows.Forms.RadioButton rbMale;
+        private System.Windows.Forms.RadioButton rbFemale;
+        public System.Windows.Forms.TextBox txtBxFirstName;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label lblTelHome;
+        private System.Windows.Forms.Label lblTelWrk;
+        private System.Windows.Forms.TextBox txtBxTelHome;
+        private System.Windows.Forms.TextBox txtBxTelWrk;
+        private System.Windows.Forms.Label lblCodeHome;
+        private System.Windows.Forms.Label lblCodeWrk;
+        private System.Windows.Forms.TextBox txtBxTelCodeHome;
+        private System.Windows.Forms.TextBox txtBxTelCodeWrk;
     }
 }

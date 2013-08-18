@@ -16,9 +16,14 @@ namespace HomeAffairsApp
             InitializeComponent();
         }
 
+        public void loginFormShow()
+        {
+            this.Show();
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

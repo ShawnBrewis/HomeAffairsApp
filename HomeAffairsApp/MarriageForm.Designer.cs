@@ -42,31 +42,31 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.grpBxHusband = new System.Windows.Forms.GroupBox();
+            this.txtBxHusbandDOB = new System.Windows.Forms.TextBox();
+            this.txtBxHusbandID = new System.Windows.Forms.TextBox();
+            this.txtBxHusbandName = new System.Windows.Forms.TextBox();
             this.grpBxMarriage = new System.Windows.Forms.GroupBox();
+            this.txtBxMarriageOfficer = new System.Windows.Forms.TextBox();
+            this.txtBxMarriagePlace = new System.Windows.Forms.TextBox();
+            this.txtBxMarriageChurch = new System.Windows.Forms.TextBox();
+            this.txtBxMarriageDate = new System.Windows.Forms.TextBox();
             this.grpBxApplicant = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantPostalCode = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantTelHome = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantTelWrk = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantAddress = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtBxWifeName = new System.Windows.Forms.TextBox();
+            this.txtBxWifeID = new System.Windows.Forms.TextBox();
+            this.txtBxWifeDOB = new System.Windows.Forms.TextBox();
             this.grpBxWife = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.grpBxHusband.SuspendLayout();
@@ -189,9 +189,9 @@
             // 
             // grpBxHusband
             // 
-            this.grpBxHusband.Controls.Add(this.textBox3);
-            this.grpBxHusband.Controls.Add(this.textBox2);
-            this.grpBxHusband.Controls.Add(this.textBox1);
+            this.grpBxHusband.Controls.Add(this.txtBxHusbandDOB);
+            this.grpBxHusband.Controls.Add(this.txtBxHusbandID);
+            this.grpBxHusband.Controls.Add(this.txtBxHusbandName);
             this.grpBxHusband.Controls.Add(this.label2);
             this.grpBxHusband.Controls.Add(this.label1);
             this.grpBxHusband.Controls.Add(this.label3);
@@ -202,12 +202,33 @@
             this.grpBxHusband.TabStop = false;
             this.grpBxHusband.Text = "Husband";
             // 
+            // txtBxHusbandDOB
+            // 
+            this.txtBxHusbandDOB.Location = new System.Drawing.Point(255, 116);
+            this.txtBxHusbandDOB.Name = "txtBxHusbandDOB";
+            this.txtBxHusbandDOB.Size = new System.Drawing.Size(179, 20);
+            this.txtBxHusbandDOB.TabIndex = 5;
+            // 
+            // txtBxHusbandID
+            // 
+            this.txtBxHusbandID.Location = new System.Drawing.Point(255, 81);
+            this.txtBxHusbandID.Name = "txtBxHusbandID";
+            this.txtBxHusbandID.Size = new System.Drawing.Size(179, 20);
+            this.txtBxHusbandID.TabIndex = 4;
+            // 
+            // txtBxHusbandName
+            // 
+            this.txtBxHusbandName.Location = new System.Drawing.Point(255, 46);
+            this.txtBxHusbandName.Name = "txtBxHusbandName";
+            this.txtBxHusbandName.Size = new System.Drawing.Size(179, 20);
+            this.txtBxHusbandName.TabIndex = 3;
+            // 
             // grpBxMarriage
             // 
-            this.grpBxMarriage.Controls.Add(this.textBox7);
-            this.grpBxMarriage.Controls.Add(this.textBox6);
-            this.grpBxMarriage.Controls.Add(this.textBox5);
-            this.grpBxMarriage.Controls.Add(this.textBox4);
+            this.grpBxMarriage.Controls.Add(this.txtBxMarriageOfficer);
+            this.grpBxMarriage.Controls.Add(this.txtBxMarriagePlace);
+            this.grpBxMarriage.Controls.Add(this.txtBxMarriageChurch);
+            this.grpBxMarriage.Controls.Add(this.txtBxMarriageDate);
             this.grpBxMarriage.Controls.Add(this.label8);
             this.grpBxMarriage.Controls.Add(this.label7);
             this.grpBxMarriage.Controls.Add(this.label9);
@@ -219,13 +240,41 @@
             this.grpBxMarriage.TabStop = false;
             this.grpBxMarriage.Text = "Details of marriage";
             // 
+            // txtBxMarriageOfficer
+            // 
+            this.txtBxMarriageOfficer.Location = new System.Drawing.Point(270, 143);
+            this.txtBxMarriageOfficer.Name = "txtBxMarriageOfficer";
+            this.txtBxMarriageOfficer.Size = new System.Drawing.Size(179, 20);
+            this.txtBxMarriageOfficer.TabIndex = 13;
+            // 
+            // txtBxMarriagePlace
+            // 
+            this.txtBxMarriagePlace.Location = new System.Drawing.Point(270, 110);
+            this.txtBxMarriagePlace.Name = "txtBxMarriagePlace";
+            this.txtBxMarriagePlace.Size = new System.Drawing.Size(179, 20);
+            this.txtBxMarriagePlace.TabIndex = 12;
+            // 
+            // txtBxMarriageChurch
+            // 
+            this.txtBxMarriageChurch.Location = new System.Drawing.Point(270, 77);
+            this.txtBxMarriageChurch.Name = "txtBxMarriageChurch";
+            this.txtBxMarriageChurch.Size = new System.Drawing.Size(179, 20);
+            this.txtBxMarriageChurch.TabIndex = 11;
+            // 
+            // txtBxMarriageDate
+            // 
+            this.txtBxMarriageDate.Location = new System.Drawing.Point(270, 44);
+            this.txtBxMarriageDate.Name = "txtBxMarriageDate";
+            this.txtBxMarriageDate.Size = new System.Drawing.Size(179, 20);
+            this.txtBxMarriageDate.TabIndex = 10;
+            // 
             // grpBxApplicant
             // 
-            this.grpBxApplicant.Controls.Add(this.textBox15);
-            this.grpBxApplicant.Controls.Add(this.textBox14);
-            this.grpBxApplicant.Controls.Add(this.textBox13);
-            this.grpBxApplicant.Controls.Add(this.textBox12);
-            this.grpBxApplicant.Controls.Add(this.textBox11);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantPostalCode);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantTelHome);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantTelWrk);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantAddress);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantName);
             this.grpBxApplicant.Controls.Add(this.label12);
             this.grpBxApplicant.Controls.Add(this.label11);
             this.grpBxApplicant.Controls.Add(this.label13);
@@ -238,54 +287,40 @@
             this.grpBxApplicant.TabStop = false;
             this.grpBxApplicant.Text = "Applicant";
             // 
-            // textBox1
+            // txtBxApplicantPostalCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(255, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtBxApplicantPostalCode.Location = new System.Drawing.Point(143, 118);
+            this.txtBxApplicantPostalCode.Name = "txtBxApplicantPostalCode";
+            this.txtBxApplicantPostalCode.Size = new System.Drawing.Size(69, 20);
+            this.txtBxApplicantPostalCode.TabIndex = 17;
             // 
-            // textBox2
+            // txtBxApplicantTelHome
             // 
-            this.textBox2.Location = new System.Drawing.Point(255, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtBxApplicantTelHome.Location = new System.Drawing.Point(300, 144);
+            this.txtBxApplicantTelHome.Name = "txtBxApplicantTelHome";
+            this.txtBxApplicantTelHome.Size = new System.Drawing.Size(74, 20);
+            this.txtBxApplicantTelHome.TabIndex = 16;
             // 
-            // textBox3
+            // txtBxApplicantTelWrk
             // 
-            this.textBox3.Location = new System.Drawing.Point(255, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtBxApplicantTelWrk.Location = new System.Drawing.Point(299, 118);
+            this.txtBxApplicantTelWrk.Name = "txtBxApplicantTelWrk";
+            this.txtBxApplicantTelWrk.Size = new System.Drawing.Size(75, 20);
+            this.txtBxApplicantTelWrk.TabIndex = 15;
             // 
-            // textBox4
+            // txtBxApplicantAddress
             // 
-            this.textBox4.Location = new System.Drawing.Point(270, 44);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(179, 20);
-            this.textBox4.TabIndex = 10;
+            this.txtBxApplicantAddress.Location = new System.Drawing.Point(143, 81);
+            this.txtBxApplicantAddress.Name = "txtBxApplicantAddress";
+            this.txtBxApplicantAddress.Size = new System.Drawing.Size(231, 20);
+            this.txtBxApplicantAddress.TabIndex = 13;
             // 
-            // textBox5
+            // txtBxApplicantName
             // 
-            this.textBox5.Location = new System.Drawing.Point(270, 77);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(179, 20);
-            this.textBox5.TabIndex = 11;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(270, 110);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(179, 20);
-            this.textBox6.TabIndex = 12;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(270, 143);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(179, 20);
-            this.textBox7.TabIndex = 13;
+            this.txtBxApplicantName.Location = new System.Drawing.Point(143, 42);
+            this.txtBxApplicantName.Name = "txtBxApplicantName";
+            this.txtBxApplicantName.Size = new System.Drawing.Size(231, 20);
+            this.txtBxApplicantName.TabIndex = 12;
             // 
             // label6
             // 
@@ -314,32 +349,32 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Identity number of wife:";
             // 
-            // textBox8
+            // txtBxWifeName
             // 
-            this.textBox8.Location = new System.Drawing.Point(219, 46);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(155, 20);
-            this.textBox8.TabIndex = 6;
+            this.txtBxWifeName.Location = new System.Drawing.Point(219, 46);
+            this.txtBxWifeName.Name = "txtBxWifeName";
+            this.txtBxWifeName.Size = new System.Drawing.Size(155, 20);
+            this.txtBxWifeName.TabIndex = 6;
             // 
-            // textBox9
+            // txtBxWifeID
             // 
-            this.textBox9.Location = new System.Drawing.Point(219, 81);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(155, 20);
-            this.textBox9.TabIndex = 7;
+            this.txtBxWifeID.Location = new System.Drawing.Point(219, 81);
+            this.txtBxWifeID.Name = "txtBxWifeID";
+            this.txtBxWifeID.Size = new System.Drawing.Size(155, 20);
+            this.txtBxWifeID.TabIndex = 7;
             // 
-            // textBox10
+            // txtBxWifeDOB
             // 
-            this.textBox10.Location = new System.Drawing.Point(219, 116);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(155, 20);
-            this.textBox10.TabIndex = 8;
+            this.txtBxWifeDOB.Location = new System.Drawing.Point(219, 116);
+            this.txtBxWifeDOB.Name = "txtBxWifeDOB";
+            this.txtBxWifeDOB.Size = new System.Drawing.Size(155, 20);
+            this.txtBxWifeDOB.TabIndex = 8;
             // 
             // grpBxWife
             // 
-            this.grpBxWife.Controls.Add(this.textBox10);
-            this.grpBxWife.Controls.Add(this.textBox9);
-            this.grpBxWife.Controls.Add(this.textBox8);
+            this.grpBxWife.Controls.Add(this.txtBxWifeDOB);
+            this.grpBxWife.Controls.Add(this.txtBxWifeID);
+            this.grpBxWife.Controls.Add(this.txtBxWifeName);
             this.grpBxWife.Controls.Add(this.label5);
             this.grpBxWife.Controls.Add(this.label4);
             this.grpBxWife.Controls.Add(this.label6);
@@ -349,20 +384,6 @@
             this.grpBxWife.TabIndex = 16;
             this.grpBxWife.TabStop = false;
             this.grpBxWife.Text = "Wife";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(143, 42);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(231, 20);
-            this.textBox11.TabIndex = 12;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(143, 81);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(231, 20);
-            this.textBox12.TabIndex = 13;
             // 
             // pictureBox1
             // 
@@ -403,27 +424,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 22;
             this.pictureBox4.TabStop = false;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(299, 118);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(75, 20);
-            this.textBox13.TabIndex = 15;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(300, 144);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(74, 20);
-            this.textBox14.TabIndex = 16;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(143, 118);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(69, 20);
-            this.textBox15.TabIndex = 17;
             // 
             // btnRegister
             // 
@@ -500,31 +500,31 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox grpBxHusband;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBxHusbandDOB;
+        private System.Windows.Forms.TextBox txtBxHusbandID;
+        private System.Windows.Forms.TextBox txtBxHusbandName;
         private System.Windows.Forms.GroupBox grpBxMarriage;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBxMarriageOfficer;
+        private System.Windows.Forms.TextBox txtBxMarriagePlace;
+        private System.Windows.Forms.TextBox txtBxMarriageChurch;
+        private System.Windows.Forms.TextBox txtBxMarriageDate;
         private System.Windows.Forms.GroupBox grpBxApplicant;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtBxApplicantAddress;
+        private System.Windows.Forms.TextBox txtBxApplicantName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtBxWifeName;
+        private System.Windows.Forms.TextBox txtBxWifeID;
+        private System.Windows.Forms.TextBox txtBxWifeDOB;
         private System.Windows.Forms.GroupBox grpBxWife;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtBxApplicantPostalCode;
+        private System.Windows.Forms.TextBox txtBxApplicantTelHome;
+        private System.Windows.Forms.TextBox txtBxApplicantTelWrk;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnCancel;
     }

@@ -16,6 +16,81 @@ namespace HomeAffairsApp
             InitializeComponent();
         }
 
+        public void setApplicantName(string aName)
+        {
+            txtBxApplicantName.Text = aName;
+        }
+
+        public void setApplicantAddress(string aAddress)
+        {
+            txtBxApplicantAddress.Text = aAddress;
+        }
+
+        public void setApplicantPostalCode(int aPostalCode)
+        {
+            txtBxApplicantPostalCode.Text = aPostalCode.ToString();
+        }
+
+        public void setApplicantTelHome(int aTelHome)
+        {
+            txtBxApplicantTelHome.Text = aTelHome.ToString();
+        }
+
+        public void setApplicantTelWrk(int aTelWrk)
+        {
+            txtBxApplicantTelWrk.Text = aTelWrk.ToString();
+        }
+
+        public string getHusbandName()
+        {
+            return txtBxHusbandName.Text;
+        }
+
+        public string getHusbandIDnum()
+        {
+            return txtBxHusbandID.Text;
+        }
+
+        public string getHusbandDOB()
+        {
+            return txtBxHusbandDOB.Text;
+        }
+
+        public string getWifeName()
+        {
+            return txtBxWifeName.Text;
+        }
+
+        public string getWifeID()
+        {
+            return txtBxWifeID.Text;
+        }
+
+        public string getWifeDOB()
+        {
+            return txtBxWifeDOB.Text;
+        }
+
+        public string getMarriageDate()
+        {
+            return txtBxMarriageDate.Text;
+        }
+
+        public string getMarriagePlace()
+        {
+            return txtBxMarriagePlace.Text;
+        }
+
+        public string getMarriageChurch()
+        {
+            return txtBxMarriageChurch.Text;
+        }
+
+        public string getMarriageOfficer()
+        {
+            return txtBxMarriageOfficer.Text;
+        }
+
         private void MarriageForm_Load(object sender, EventArgs e)
         {
 
