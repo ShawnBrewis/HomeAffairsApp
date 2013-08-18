@@ -76,7 +76,7 @@
             this.marriageCertificateToolStripMenuItem,
             this.deathCertificateToolStripMenuItem});
             this.formsToolStripMenuItem.Name = "formsToolStripMenuItem";
-            this.formsToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.formsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.formsToolStripMenuItem.Text = "Forms";
             this.formsToolStripMenuItem.Click += new System.EventHandler(this.formsToolStripMenuItem_Click);
             // 
@@ -85,23 +85,26 @@
             this.birthCertificateToolStripMenuItem.Name = "birthCertificateToolStripMenuItem";
             this.birthCertificateToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.birthCertificateToolStripMenuItem.Text = "Birth Certificate";
+            this.birthCertificateToolStripMenuItem.Click += new System.EventHandler(this.btnBirth_Click);
             // 
             // marriageCertificateToolStripMenuItem
             // 
             this.marriageCertificateToolStripMenuItem.Name = "marriageCertificateToolStripMenuItem";
             this.marriageCertificateToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.marriageCertificateToolStripMenuItem.Text = "Marriage Certificate";
+            this.marriageCertificateToolStripMenuItem.Click += new System.EventHandler(this.btnMarriage_Click);
             // 
             // deathCertificateToolStripMenuItem
             // 
             this.deathCertificateToolStripMenuItem.Name = "deathCertificateToolStripMenuItem";
             this.deathCertificateToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.deathCertificateToolStripMenuItem.Text = "Death Certificate";
+            this.deathCertificateToolStripMenuItem.Click += new System.EventHandler(this.btnID_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -196,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(671, 451);
             this.Controls.Add(this.picBxRightHand);
             this.Controls.Add(this.groupBox2);

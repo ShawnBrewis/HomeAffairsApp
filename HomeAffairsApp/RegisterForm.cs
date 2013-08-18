@@ -134,5 +134,25 @@ namespace HomeAffairsApp
             cmBxDay.Text = "";
             cmBxMonth.Text = "";
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBxEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

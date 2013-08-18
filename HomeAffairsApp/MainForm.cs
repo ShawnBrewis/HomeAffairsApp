@@ -29,6 +29,8 @@ namespace HomeAffairsApp
             myLogin.ShowDialog();
             myRegForm.ShowDialog();
             lblName.Text = myRegForm.txtBxFirstName.Text;
+
+            
         }
 
         private void formsToolStripMenuItem_Click(object sender, EventArgs e)

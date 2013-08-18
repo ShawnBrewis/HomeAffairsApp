@@ -276,9 +276,9 @@
             this.lblFatherForename.AutoSize = true;
             this.lblFatherForename.Location = new System.Drawing.Point(31, 71);
             this.lblFatherForename.Name = "lblFatherForename";
-            this.lblFatherForename.Size = new System.Drawing.Size(87, 13);
+            this.lblFatherForename.Size = new System.Drawing.Size(84, 13);
             this.lblFatherForename.TabIndex = 1;
-            this.lblFatherForename.Text = "Forename in Full:";
+            this.lblFatherForename.Text = "Forename in full:";
             // 
             // txtBxMotherMaiden
             // 
@@ -473,6 +473,7 @@
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.Location = new System.Drawing.Point(725, 335);
             this.btnRegister.Name = "btnRegister";
@@ -484,6 +485,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(948, 335);
             this.btnCancel.Name = "btnCancel";
