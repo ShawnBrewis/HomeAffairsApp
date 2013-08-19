@@ -11,6 +11,8 @@ namespace HomeAffairsApp
 {
     public partial class MainForm : Form
     {
+        private bool chosenForm = false;
+
         //-- Create Form Objects --//
         RegisterForm userRegForm = new RegisterForm();
         LoginForm userLogin = new LoginForm();
@@ -24,6 +26,9 @@ namespace HomeAffairsApp
         //Create new marriage certificate object
         MarriageCertificate myMarriageCert = new MarriageCertificate();
 
+        //Create new death certificate object
+        DeathCertificate myDeathCert = new DeathCertificate();
+
         public MainForm()
         {
             InitializeComponent();
@@ -36,6 +41,44 @@ namespace HomeAffairsApp
             userRegForm.ShowDialog();
             lblName.Text = userRegForm.txtBxFirstName.Text;
 
+            
+
+            //Assign values to the death certificate object
+            myDeathCert.FirstName = userRegForm.getFirstName();
+            myDeathCert.LastName = userRegForm.getLastName();
+            myDeathCert.Address = userRegForm.getAddress();
+            myDeathCert.City = userRegForm.getCity();
+            myDeathCert.Province = userRegForm.getProvince();
+            try
+            {
+                myDeathCert.TelHome = int.Parse(userRegForm.getTelHome());
+                myDeathCert.TelWork = int.Parse(userRegForm.getTelWrk());
+                myDeathCert.TelHomeCode = int.Parse(userRegForm.getTelHomeCode());
+                myDeathCert.TelWrkCode = int.Parse(userRegForm.getTelWrkCode());
+            }
+            catch (FormatException)
+            {
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("Number too large");
+            }
+            
+        }
+    
+
+        private void formsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnBirth_Click(object sender, EventArgs e)
+        {
             //Assign values to the BirthCertificate object
             myBirthCert.FirstName = userRegForm.getFirstName();
             myBirthCert.LastName = userRegForm.getLastName();
@@ -54,6 +97,9 @@ namespace HomeAffairsApp
             catch (FormatException)
             {
             }
+            catch (OverflowException)
+            {
+            }
             myBirthCert.Email = userRegForm.getEmail();
             myBirthCert.Password = userRegForm.getPassword();
             myBirthCert.FatherForename = userBirthForm.getFatherForename();
@@ -65,7 +111,7 @@ namespace HomeAffairsApp
             myBirthCert.PersonForename = userBirthForm.getPersonForename();
             myBirthCert.PersonMaidenName = userBirthForm.getPersonMaiden();
             myBirthCert.PersonCityBirth = userBirthForm.getPersonTown();
-            /////////////////////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////
 
             //Assign values to the Marriage certificate object
             myMarriageCert.HusbandName = userMarriage.getHusbandName();
@@ -92,26 +138,11 @@ namespace HomeAffairsApp
             catch (FormatException)
             {
             }
+            catch (OverflowException)
+            {
+                MessageBox.Show("Number too large");
+            }
             ///////////////////////////////////////////////////////////////////////
-
-
-
-            
-        }
-    
-
-        private void formsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void btnBirth_Click(object sender, EventArgs e)
-        {
             userBirthForm.setApplicantSurname(myBirthCert.LastName);
             userBirthForm.setApplicantForename(myBirthCert.FirstName);
             userBirthForm.setApplicantAddress(myBirthCert.Address + ", " + myBirthCert.City + ", " + myBirthCert.Province);
@@ -119,11 +150,13 @@ namespace HomeAffairsApp
             userBirthForm.setApplicantTelHomeCode(myBirthCert.TelHomeCode);
             userBirthForm.setApplicantTelWrk(myBirthCert.TelWork);
             userBirthForm.setApplicantTelWrkCode(myBirthCert.TelWrkCode);
+            userBirthForm.getPersonForename().ToString();
             userBirthForm.ShowDialog();
         }
 
         private void btnMarriage_Click(object sender, EventArgs e)
         {
+            chosenForm = true;
             userMarriage.setApplicantName(myMarriageCert.FirstName + ", " + myMarriageCert.LastName);
             userMarriage.setApplicantTelHome(myMarriageCert.TelHome);
             userMarriage.setApplicantTelWrk(myMarriageCert.TelWork);
@@ -133,7 +166,21 @@ namespace HomeAffairsApp
 
         private void btnID_Click(object sender, EventArgs e)
         {
+            chosenForm = true;
+            userDeath.setApplicantSurname(myDeathCert.LastName);
+            userDeath.setApplicantTelHome(myDeathCert.TelHome);
+            userDeath.setApplicantTelWrk(myDeathCert.TelWork);
+            userDeath.setApplicantTelHomeCode(myDeathCert.TelHomeCode);
+            userDeath.setApplicantTelWrkCode(myDeathCert.TelWrkCode);
+            userDeath.setApplicantInitials(myDeathCert.FirstName + "" + myDeathCert.LastName);
+            userDeath.setApplicantResidentualAddress(myDeathCert.Address);
+            userDeath.setApplicantPOstalAddress("sames as above");
             userDeath.ShowDialog();
         }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(myBirthCert.ToString());
+        } 
     }
 }

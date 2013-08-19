@@ -47,11 +47,11 @@
             this.lblPersonDeceasedSurname = new System.Windows.Forms.Label();
             this.lblPersonDeceasedID = new System.Windows.Forms.Label();
             this.grpBxApplicant = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantPostalCode = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantResAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBxApplicantHomeCode = new System.Windows.Forms.TextBox();
             this.txtBxApplicantWrkCode = new System.Windows.Forms.TextBox();
@@ -60,7 +60,7 @@
             this.txtBxApplicantTelHome = new System.Windows.Forms.TextBox();
             this.txtBxApplicantTelWrk = new System.Windows.Forms.TextBox();
             this.txtBxApplicantPostal = new System.Windows.Forms.TextBox();
-            this.txtBxApplicantForename = new System.Windows.Forms.TextBox();
+            this.txtBxApplicantInitials = new System.Windows.Forms.TextBox();
             this.txtBxApplicantSurname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -234,11 +234,11 @@
             // grpBxApplicant
             // 
             this.grpBxApplicant.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpBxApplicant.Controls.Add(this.textBox3);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantPostalCode);
             this.grpBxApplicant.Controls.Add(this.label9);
-            this.grpBxApplicant.Controls.Add(this.textBox2);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantResAddress);
             this.grpBxApplicant.Controls.Add(this.label8);
-            this.grpBxApplicant.Controls.Add(this.textBox1);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantID);
             this.grpBxApplicant.Controls.Add(this.label7);
             this.grpBxApplicant.Controls.Add(this.txtBxApplicantHomeCode);
             this.grpBxApplicant.Controls.Add(this.txtBxApplicantWrkCode);
@@ -247,7 +247,7 @@
             this.grpBxApplicant.Controls.Add(this.txtBxApplicantTelHome);
             this.grpBxApplicant.Controls.Add(this.txtBxApplicantTelWrk);
             this.grpBxApplicant.Controls.Add(this.txtBxApplicantPostal);
-            this.grpBxApplicant.Controls.Add(this.txtBxApplicantForename);
+            this.grpBxApplicant.Controls.Add(this.txtBxApplicantInitials);
             this.grpBxApplicant.Controls.Add(this.txtBxApplicantSurname);
             this.grpBxApplicant.Controls.Add(this.label4);
             this.grpBxApplicant.Controls.Add(this.label3);
@@ -261,12 +261,12 @@
             this.grpBxApplicant.TabStop = false;
             this.grpBxApplicant.Text = "Particulars of Applicant";
             // 
-            // textBox3
+            // txtBxApplicantPostalCode
             // 
-            this.textBox3.Location = new System.Drawing.Point(214, 179);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 18;
+            this.txtBxApplicantPostalCode.Location = new System.Drawing.Point(214, 179);
+            this.txtBxApplicantPostalCode.Name = "txtBxApplicantPostalCode";
+            this.txtBxApplicantPostalCode.Size = new System.Drawing.Size(100, 20);
+            this.txtBxApplicantPostalCode.TabIndex = 18;
             // 
             // label9
             // 
@@ -277,12 +277,12 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Postal code:";
             // 
-            // textBox2
+            // txtBxApplicantResAddress
             // 
-            this.textBox2.Location = new System.Drawing.Point(214, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(273, 20);
-            this.textBox2.TabIndex = 16;
+            this.txtBxApplicantResAddress.Location = new System.Drawing.Point(214, 121);
+            this.txtBxApplicantResAddress.Name = "txtBxApplicantResAddress";
+            this.txtBxApplicantResAddress.Size = new System.Drawing.Size(273, 20);
+            this.txtBxApplicantResAddress.TabIndex = 16;
             // 
             // label8
             // 
@@ -293,12 +293,12 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Residential address:";
             // 
-            // textBox1
+            // txtBxApplicantID
             // 
-            this.textBox1.Location = new System.Drawing.Point(214, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 20);
-            this.textBox1.TabIndex = 14;
+            this.txtBxApplicantID.Location = new System.Drawing.Point(214, 92);
+            this.txtBxApplicantID.Name = "txtBxApplicantID";
+            this.txtBxApplicantID.Size = new System.Drawing.Size(274, 20);
+            this.txtBxApplicantID.TabIndex = 14;
             // 
             // label7
             // 
@@ -362,12 +362,12 @@
             this.txtBxApplicantPostal.Size = new System.Drawing.Size(273, 20);
             this.txtBxApplicantPostal.TabIndex = 7;
             // 
-            // txtBxApplicantForename
+            // txtBxApplicantInitials
             // 
-            this.txtBxApplicantForename.Location = new System.Drawing.Point(214, 63);
-            this.txtBxApplicantForename.Name = "txtBxApplicantForename";
-            this.txtBxApplicantForename.Size = new System.Drawing.Size(273, 20);
-            this.txtBxApplicantForename.TabIndex = 6;
+            this.txtBxApplicantInitials.Location = new System.Drawing.Point(214, 63);
+            this.txtBxApplicantInitials.Name = "txtBxApplicantInitials";
+            this.txtBxApplicantInitials.Size = new System.Drawing.Size(273, 20);
+            this.txtBxApplicantInitials.TabIndex = 6;
             // 
             // txtBxApplicantSurname
             // 
@@ -479,6 +479,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DeathForm";
             this.Text = "Death Certificate Form";
+            this.Load += new System.EventHandler(this.DeathForm_Load);
             this.grpBxPersonDeceased.ResumeLayout(false);
             this.grpBxPersonDeceased.PerformLayout();
             this.grpBxApplicant.ResumeLayout(false);
@@ -509,11 +510,11 @@
         private System.Windows.Forms.Label lblPersonDeceasedSurname;
         private System.Windows.Forms.Label lblPersonDeceasedID;
         private System.Windows.Forms.GroupBox grpBxApplicant;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBxApplicantPostalCode;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBxApplicantResAddress;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBxApplicantID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBxApplicantHomeCode;
         private System.Windows.Forms.TextBox txtBxApplicantWrkCode;
@@ -522,7 +523,7 @@
         private System.Windows.Forms.TextBox txtBxApplicantTelHome;
         private System.Windows.Forms.TextBox txtBxApplicantTelWrk;
         private System.Windows.Forms.TextBox txtBxApplicantPostal;
-        private System.Windows.Forms.TextBox txtBxApplicantForename;
+        private System.Windows.Forms.TextBox txtBxApplicantInitials;
         private System.Windows.Forms.TextBox txtBxApplicantSurname;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

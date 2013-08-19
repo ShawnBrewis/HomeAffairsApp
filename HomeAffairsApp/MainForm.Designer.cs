@@ -41,9 +41,10 @@
             this.btnMarriage = new System.Windows.Forms.Button();
             this.btnID = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblName = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
             this.picBxRightHand = new System.Windows.Forms.PictureBox();
+            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -56,7 +57,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(671, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(930, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,7 +77,7 @@
             this.marriageCertificateToolStripMenuItem,
             this.deathCertificateToolStripMenuItem});
             this.formsToolStripMenuItem.Name = "formsToolStripMenuItem";
-            this.formsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.formsToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.formsToolStripMenuItem.Text = "Forms";
             this.formsToolStripMenuItem.Click += new System.EventHandler(this.formsToolStripMenuItem_Click);
             // 
@@ -104,7 +105,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -120,11 +121,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.btnMarriage);
             this.groupBox1.Controls.Add(this.btnID);
             this.groupBox1.Controls.Add(this.btnBirth);
-            this.groupBox1.Location = new System.Drawing.Point(416, 49);
+            this.groupBox1.Location = new System.Drawing.Point(546, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(243, 315);
             this.groupBox1.TabIndex = 2;
@@ -153,26 +154,19 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lblName);
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 49);
+            this.groupBox2.Controls.Add(this.lblName);
+            this.groupBox2.Location = new System.Drawing.Point(142, 49);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(293, 315);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Welcome";
             // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(58, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(0, 13);
-            this.lblName.TabIndex = 1;
-            // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(6, 31);
@@ -185,22 +179,41 @@
     "e of the options on the right to register for a Birth Certificate, Marriage Cert" +
     "ificate or a Death Certificate.";
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(58, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 13);
+            this.lblName.TabIndex = 1;
+            // 
             // picBxRightHand
             // 
             this.picBxRightHand.Image = ((System.Drawing.Image)(resources.GetObject("picBxRightHand.Image")));
-            this.picBxRightHand.Location = new System.Drawing.Point(311, 147);
+            this.picBxRightHand.Location = new System.Drawing.Point(441, 147);
             this.picBxRightHand.Name = "picBxRightHand";
             this.picBxRightHand.Size = new System.Drawing.Size(100, 47);
             this.picBxRightHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBxRightHand.TabIndex = 4;
             this.picBxRightHand.TabStop = false;
             // 
+            // btnGenerateReport
+            // 
+            this.btnGenerateReport.Location = new System.Drawing.Point(441, 406);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(100, 44);
+            this.btnGenerateReport.TabIndex = 5;
+            this.btnGenerateReport.Text = "Generate Report";
+            this.btnGenerateReport.UseVisualStyleBackColor = true;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(671, 451);
+            this.ClientSize = new System.Drawing.Size(930, 514);
+            this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.picBxRightHand);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -240,6 +253,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox picBxRightHand;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnGenerateReport;
     }
 }
 

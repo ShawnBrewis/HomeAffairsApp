@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HomeAffairsApp
 {
-    class BirthCertificate: User
+    class BirthCertificate : User
     {
         //Variables for the Person (baby) concerned
         private string personIDnumber;
@@ -13,7 +13,7 @@ namespace HomeAffairsApp
         private string personMaidenName;
         private string personForename;
         private string personDOB;
-        private string personCityBirth;       
+        private string personCityBirth;
         private string fatherSurname;
         private string fatherForename;
         private string motherMaiden;
@@ -23,7 +23,7 @@ namespace HomeAffairsApp
         {
 
         }
-  
+
         public string PersonIDnumber
         {
             get { return personIDnumber; }
@@ -82,6 +82,14 @@ namespace HomeAffairsApp
         {
             get { return motherForename; }
             set { motherForename = value; }
-        }   
+        }
+
+        public override string ToString()
+        {
+           return base.ToString() + "\nBaby ID number: " + personIDnumber.ToString() + "\nBaby Surname: " + personSurname.ToString() +
+                "\nBaby maiden name (if a married woman): " + personMaidenName.ToString() + "\nBaby date of birth:" + personDOB.ToString() +
+                "\nBaby birth place: " + personCityBirth.ToString() + "\nFather Surname: " + fatherSurname.ToString() + "\nFather first name: " + fatherForename.ToString() +
+                "\nMother maiden: " + motherMaiden.ToString() + "\nMother forename: " + motherForename.ToString();
+        }
     }
 }

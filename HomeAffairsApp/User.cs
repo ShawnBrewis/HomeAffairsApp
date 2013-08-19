@@ -30,17 +30,17 @@ namespace HomeAffairsApp
         {
             birthDate = aBirthdate;
             firstName = aFirstName;
-            aLastName = lastName;
-            aAddress = address;
+            lastName = aLastName;
+            address = aAddress;
             province = aProvince;
             city = aCity;
-            aGender = gender;
-            aEmail = email;
-            aPassword = password;
-            aTelHome = telHome;
-            aTelWrk = telWork;
-            aTelHomeCode = telHomeCode;
-            aTelWrkCode = telWrkCode;
+            gender = aGender;
+            email = aEmail;
+            password = aPassword;
+            telHome = aTelHome;
+            telWork = aTelWrk;
+            telHomeCode = aTelHomeCode;
+            telWrkCode = aTelWrkCode;
         }
 
         public string BirthDate
@@ -125,6 +125,14 @@ namespace HomeAffairsApp
         {
             int idNumber = 0;
             return idNumber;
+        }
+
+        public override string ToString()
+        {
+            return "------------- Your Details --------------" +
+                   "\nFirst name :" + firstName.ToString() + "\nLast Name: " + LastName.ToString() +
+                   "\nAddress :" + address.ToString() + "\nCity :" + city.ToString() + "\nProvince :" +
+                   province.ToString();
         }
     }
 }
