@@ -81,5 +81,14 @@ namespace HomeAffairsApp
             get { return marriageOfficer; }
             set { marriageOfficer = value; }
         }
+
+        public override string ToString()
+        {
+            return base.ToString() +
+                "\n------------- Marriage Certificate --------------" + 
+                "\nHusband name: " + husbandName + "\nHusband ID number: " + husbandIDnumber + "\nHusband Date of Birth: " + "\nWife name: " + wifeName +
+                "Wife ID number: " + wifeIDnumber + "\nWife Date Of Birth: " + wifeDOB + "\nDate of marriage: " + marriageDate + 
+                "\nChurch: " + marriageChurch + "\nMarriage place: " + marriagePlace + "\nMariage Officer: " + marriageOfficer;
+        }
     }
 }

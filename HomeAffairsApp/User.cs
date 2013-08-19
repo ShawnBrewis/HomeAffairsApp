@@ -138,7 +138,7 @@ namespace HomeAffairsApp
                     randomNumGender = rand.Next(5000, 10000);
                 }
             }
-            string idNumber = birthDate + randomNumGender + "0" + "8" + rand.Next(80000);
+            string idNumber = birthDate + " " + randomNumGender + " 0 " + " 8 " + " checksum." + rand.Next(80000);
             return idNumber;
         }
 

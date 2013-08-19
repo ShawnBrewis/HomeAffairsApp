@@ -67,7 +67,7 @@ namespace HomeAffairsApp
 
         public string getRadioBtnGender()
         {
-            if (rbFemale.Enabled == true)
+            if (rbFemale.Checked == true)
             {
                 gender = "Female";
                 return gender;

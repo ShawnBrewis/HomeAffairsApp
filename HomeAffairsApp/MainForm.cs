@@ -38,7 +38,7 @@ namespace HomeAffairsApp
             userLogin.ShowDialog();
             userRegForm.ShowDialog();
             lblName.Text = userRegForm.txtBxFirstName.Text;
-            
+
 
             //Assign values to the BirthCertificate object
             myBirthCert.FirstName = userRegForm.getFirstName();
@@ -115,39 +115,6 @@ namespace HomeAffairsApp
 
         private void btnMarriage_Click(object sender, EventArgs e)
         {
-            //Assign values to the Marriage certificate object
-            myMarriageCert.HusbandName = userMarriage.getHusbandName();
-            myMarriageCert.HusbandIDnumber = userMarriage.getHusbandIDnum();
-            myMarriageCert.HusbandDOB = userMarriage.getHusbandDOB();
-            myMarriageCert.WifeName = userMarriage.getWifeName();
-            myMarriageCert.WifeIDnumber = userMarriage.getWifeID();
-            myMarriageCert.WifeDOB = userMarriage.getWifeDOB();
-            myMarriageCert.MarriageDate = userMarriage.getMarriageDate();
-            myMarriageCert.MarriageChurch = userMarriage.getMarriageChurch();
-            myMarriageCert.MarriagePlace = userMarriage.getMarriagePlace();
-            myMarriageCert.MarriageOfficer = userMarriage.getMarriageOfficer();
-
-            //Get values from parent object
-            myMarriageCert.FirstName = userRegForm.getFirstName();
-            myMarriageCert.LastName = userRegForm.getLastName();
-            myMarriageCert.Address = userRegForm.getAddress();
-            myMarriageCert.City = userRegForm.getCity();
-            myMarriageCert.Province = userRegForm.getProvince();
-            try
-            {
-                myMarriageCert.TelHome = int.Parse(userRegForm.getTelHome());
-                myMarriageCert.TelWork = int.Parse(userRegForm.getTelWrk());
-            }
-            catch (FormatException)
-            {
-            }
-            catch (OverflowException)
-            {
-                MessageBox.Show("Number too large");
-            }
-
-            ///////////////////////////////////////////////////////////////////////
-
             //Set values to the form
             userMarriage.setApplicantName(myMarriageCert.FirstName + ", " + myMarriageCert.LastName);
             userMarriage.setApplicantTelHome(myMarriageCert.TelHome);
@@ -183,8 +150,62 @@ namespace HomeAffairsApp
             myBirthCert.PersonMaidenName = userBirthForm.getPersonMaiden().ToString();
             myBirthCert.PersonCityBirth = userBirthForm.getPersonTown().ToString();
             ///////////////////////////////////////////////////////////////////////////
-            MessageBox.Show(myBirthCert.ToString());
 
+            //Assign values to the Marriage certificate object
+            myMarriageCert.HusbandName = userMarriage.getHusbandName();
+            myMarriageCert.HusbandIDnumber = userMarriage.getHusbandIDnum();
+            myMarriageCert.HusbandDOB = userMarriage.getHusbandDOB();
+            myMarriageCert.WifeName = userMarriage.getWifeName();
+            myMarriageCert.WifeIDnumber = userMarriage.getWifeID();
+            myMarriageCert.WifeDOB = userMarriage.getWifeDOB();
+            myMarriageCert.MarriageDate = userMarriage.getMarriageDate();
+            myMarriageCert.MarriageChurch = userMarriage.getMarriageChurch();
+            myMarriageCert.MarriagePlace = userMarriage.getMarriagePlace();
+            myMarriageCert.MarriageOfficer = userMarriage.getMarriageOfficer();
+
+            //Get values from parent object
+            myMarriageCert.FirstName = userRegForm.getFirstName();
+            myMarriageCert.LastName = userRegForm.getLastName();
+            myMarriageCert.Address = userRegForm.getAddress();
+            myMarriageCert.City = userRegForm.getCity();
+            myMarriageCert.Province = userRegForm.getProvince();
+            try
+            {
+                myMarriageCert.TelHome = int.Parse(userRegForm.getTelHome());
+                myMarriageCert.TelWork = int.Parse(userRegForm.getTelWrk());
+            }
+            catch (FormatException)
+            {
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("Number too large");
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+
+            if (myMarriageCert.HusbandName != "")
+            {
+
+                MessageBox.Show(myMarriageCert.ToString());
+            }
+            else
+            {
+                if (myBirthCert.FatherForename != "")
+                {
+                    MessageBox.Show(myDeathCert.ToString());
+                }
+
+                else
+                {
+                    if (myDeathCert.DeceasedForename != "")
+
+                        MessageBox.Show(myBirthCert.ToString());
+                }
+               
+                    MessageBox.Show("Nothing to print");
+                
+            }
         }
     }
 }
