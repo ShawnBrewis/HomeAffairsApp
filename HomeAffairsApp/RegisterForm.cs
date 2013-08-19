@@ -113,7 +113,7 @@ namespace HomeAffairsApp
         {
             this.ShowDialog();
         }
-
+        
         private void RegisterForm_Load(object sender, EventArgs e)
         {
             ResetMyDate();

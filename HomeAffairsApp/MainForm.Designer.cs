@@ -45,10 +45,12 @@
             this.lblName = new System.Windows.Forms.Label();
             this.picBxRightHand = new System.Windows.Forms.PictureBox();
             this.btnGenerateReport = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxRightHand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -57,7 +59,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(930, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(698, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -125,7 +127,7 @@
             this.groupBox1.Controls.Add(this.btnMarriage);
             this.groupBox1.Controls.Add(this.btnID);
             this.groupBox1.Controls.Add(this.btnBirth);
-            this.groupBox1.Location = new System.Drawing.Point(546, 49);
+            this.groupBox1.Location = new System.Drawing.Point(430, 174);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(243, 315);
             this.groupBox1.TabIndex = 2;
@@ -155,9 +157,10 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.lblName);
-            this.groupBox2.Location = new System.Drawing.Point(142, 49);
+            this.groupBox2.Location = new System.Drawing.Point(26, 174);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(293, 315);
             this.groupBox2.TabIndex = 3;
@@ -169,11 +172,11 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 31);
+            this.textBox1.Location = new System.Drawing.Point(12, 31);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(281, 258);
+            this.textBox1.Size = new System.Drawing.Size(275, 258);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Welcome To The South African Department of Home Affairs.\r\n\r\nPlease choose from on" +
     "e of the options on the right to register for a Birth Certificate, Marriage Cert" +
@@ -190,34 +193,49 @@
             // picBxRightHand
             // 
             this.picBxRightHand.Image = ((System.Drawing.Image)(resources.GetObject("picBxRightHand.Image")));
-            this.picBxRightHand.Location = new System.Drawing.Point(441, 147);
+            this.picBxRightHand.Location = new System.Drawing.Point(319, 251);
             this.picBxRightHand.Name = "picBxRightHand";
-            this.picBxRightHand.Size = new System.Drawing.Size(100, 47);
+            this.picBxRightHand.Size = new System.Drawing.Size(105, 65);
             this.picBxRightHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBxRightHand.TabIndex = 4;
             this.picBxRightHand.TabStop = false;
             // 
             // btnGenerateReport
             // 
-            this.btnGenerateReport.Location = new System.Drawing.Point(441, 406);
+            this.btnGenerateReport.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateReport.Location = new System.Drawing.Point(247, 495);
             this.btnGenerateReport.Name = "btnGenerateReport";
-            this.btnGenerateReport.Size = new System.Drawing.Size(100, 44);
+            this.btnGenerateReport.Size = new System.Drawing.Size(210, 60);
             this.btnGenerateReport.TabIndex = 5;
             this.btnGenerateReport.Text = "Generate Report";
-            this.btnGenerateReport.UseVisualStyleBackColor = true;
+            this.btnGenerateReport.UseVisualStyleBackColor = false;
             this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(26, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 141);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(930, 514);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(698, 563);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.picBxRightHand);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
@@ -231,6 +249,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxRightHand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,6 +273,7 @@
         private System.Windows.Forms.PictureBox picBxRightHand;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnGenerateReport;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

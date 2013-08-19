@@ -24,6 +24,21 @@ namespace HomeAffairsApp
 
         }
 
+        public BirthCertificate(string aPerID, string aPerSur, string aPerMaid, string aPerFore, string aPerDOB, string aPerCity,
+            string aFatherFore, string aFatherSur, string aMotherMaid, string aMotherFore)
+        {
+            personIDnumber = aPerID;
+            personSurname = aPerSur;
+            personMaidenName = aPerMaid;
+            personForename = aPerFore;
+            personDOB = aPerDOB;
+            fatherSurname = aFatherSur;
+            fatherForename = aFatherFore;
+            motherMaiden = aMotherMaid;
+            motherForename = aMotherFore;
+        }
+
+
         public string PersonIDnumber
         {
             get { return personIDnumber; }
@@ -86,10 +101,10 @@ namespace HomeAffairsApp
 
         public override string ToString()
         {
-           return base.ToString() + "\nBaby ID number: " + personIDnumber.ToString() + "\nBaby Surname: " + personSurname.ToString() +
-                "\nBaby maiden name (if a married woman): " + personMaidenName.ToString() + "\nBaby date of birth:" + personDOB.ToString() +
-                "\nBaby birth place: " + personCityBirth.ToString() + "\nFather Surname: " + fatherSurname.ToString() + "\nFather first name: " + fatherForename.ToString() +
-                "\nMother maiden: " + motherMaiden.ToString() + "\nMother forename: " + motherForename.ToString();
+           return base.ToString() + "\n---------------- Form Details ---------------- " + "\nBaby ID number: " + personIDnumber + "\nBaby Surname: " + personSurname +
+                "\nBaby maiden name (if a married woman): " + personMaidenName + "\nBaby date of birth:" + personDOB +
+                "\nBaby birth place: " + personCityBirth + "\nFather Surname: " + fatherSurname + "\nFather first name: " + fatherForename +
+                "\nMother maiden: " + motherMaiden + "\nMother forename: " + motherForename;
         }
     }
 }

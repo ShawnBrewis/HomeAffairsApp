@@ -121,9 +121,24 @@ namespace HomeAffairsApp
             set { password = value; }
         }
 
-        private int generateIDNumber()
+        public string generateIDNumber()
         {
-            int idNumber = 0;
+            Random rand = new Random();
+            int randomNumGender = 0;
+          
+
+            if (gender == "Female")
+            {
+                randomNumGender = rand.Next(0, 4999);
+            }
+            else
+            {
+                if (gender == "Male")
+                {
+                    randomNumGender = rand.Next(5000, 10000);
+                }
+            }
+            string idNumber = birthDate + randomNumGender + "0" + "8" + rand.Next(80000);
             return idNumber;
         }
 
