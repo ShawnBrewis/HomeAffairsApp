@@ -105,5 +105,10 @@ namespace HomeAffairsApp
         {
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

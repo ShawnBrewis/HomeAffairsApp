@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace HomeAffairsApp
 {
@@ -34,11 +35,34 @@ namespace HomeAffairsApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //--Show Forms--//
+             //--Show Forms--//
             userLogin.ShowDialog();
             userRegForm.ShowDialog();
-            lblName.Text = userRegForm.txtBxFirstName.Text;
+            try
+            {
+                StreamReader userDetails = new StreamReader("Login.txt");
+                string details = userDetails.ReadLine();
+                userDetails.Close();
+                string[] userValues = details.Split('%');
 
+                userRegForm.setName(userValues[0]);
+                userRegForm.setLastname(userValues[1]);
+                userRegForm.setAddress(userValues[2]);
+                userRegForm.setCity(userValues[3]);
+                userRegForm.setProvince(userValues[4]);
+                userRegForm.setYear(userValues[5]);
+                userRegForm.setMonth(userValues[5]);
+                userRegForm.setDay(userValues[6]);
+                //userRegForm.setRadioMale(userValues[7]);
+                userRegForm.setEmail(userValues[9]);
+            }
+            catch (IOException)
+            {
+            }
+
+            //Display user name on the label on the main screen
+            lblUserName.Visible = true;
+            lblUserName.Text = userRegForm.txtBxFirstName.Text;
 
             //Assign values to the BirthCertificate object
             myBirthCert.FirstName = userRegForm.getFirstName();
@@ -62,8 +86,7 @@ namespace HomeAffairsApp
             {
             }
 
-
-            //Assign values to the death certificate object
+            //Assign the users values to the death certificate object
             myDeathCert.FirstName = userRegForm.getFirstName();
             myDeathCert.LastName = userRegForm.getLastName();
             myDeathCert.Address = userRegForm.getAddress();
@@ -84,8 +107,21 @@ namespace HomeAffairsApp
                 MessageBox.Show("Number too large");
             }
 
-            MessageBox.Show("" + myBirthCert.generateIDNumber());
-
+            //Assign values to the Marriage certificate object
+            myMarriageCert.FirstName = userRegForm.getFirstName() + ", " + userRegForm.getLastName();
+            myMarriageCert.Address = userRegForm.getAddress() + ", " + userRegForm.getCity() + ", " + userRegForm.getProvince();
+            try
+            {
+            myMarriageCert.TelHome = int.Parse(userRegForm.getTelHome());
+            myMarriageCert.TelWork = int.Parse(userRegForm.getTelWrk());
+            }
+            catch (FormatException)
+            {
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("Number too large");
+            }
         }
 
 
@@ -111,6 +147,7 @@ namespace HomeAffairsApp
             userBirthForm.setApplicantTelWrkCode(myBirthCert.TelWrkCode);
             userBirthForm.getPersonForename().ToString();
             userBirthForm.ShowDialog();
+
         }
 
         private void btnMarriage_Click(object sender, EventArgs e)
@@ -125,6 +162,7 @@ namespace HomeAffairsApp
 
         private void btnID_Click(object sender, EventArgs e)
         {
+            //Set values to the form
             userDeath.setApplicantSurname(myDeathCert.LastName);
             userDeath.setApplicantTelHome(myDeathCert.TelHome);
             userDeath.setApplicantTelWrk(myDeathCert.TelWork);
@@ -133,6 +171,10 @@ namespace HomeAffairsApp
             userDeath.setApplicantInitials(myDeathCert.FirstName + "" + myDeathCert.LastName);
             userDeath.setApplicantResidentualAddress(myDeathCert.Address);
             userDeath.setApplicantPOstalAddress("sames as above");
+            userDeath.setApplicantIDnumber(myBirthCert.IdNumber);
+
+            //MessageBox.Show("" + myBirthCert.generateIDNumber());
+
             userDeath.ShowDialog();
         }
 
@@ -184,6 +226,7 @@ namespace HomeAffairsApp
 
             ///////////////////////////////////////////////////////////////////////
 
+            //Check if the form has data
             if (myMarriageCert.HusbandName != "")
             {
 

@@ -20,6 +20,9 @@ namespace HomeAffairsApp
         private int telWrkCode;        
         private string email;
         private string password;
+        private string idNumber;
+
+        
 
         public User()
         {
@@ -121,7 +124,7 @@ namespace HomeAffairsApp
             set { password = value; }
         }
 
-        public string generateIDNumber()
+        private string generateIDNumber()
         {
             Random rand = new Random();
             int randomNumGender = 0;
@@ -138,8 +141,13 @@ namespace HomeAffairsApp
                     randomNumGender = rand.Next(5000, 10000);
                 }
             }
-            string idNumber = birthDate + " " + randomNumGender + " 0 " + " 8 " + " checksum." + rand.Next(80000);
+            string idNumber = birthDate.Substring(2, birthDate.Length-2) + "" + randomNumGender + "0" + "8" + rand.Next(1,9);
             return idNumber;
+        }
+
+        public string IdNumber
+        {
+            get { return generateIDNumber(); }
         }
 
         public override string ToString()

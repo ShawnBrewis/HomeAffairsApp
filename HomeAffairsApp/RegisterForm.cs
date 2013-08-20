@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace HomeAffairsApp
 {
@@ -18,6 +19,7 @@ namespace HomeAffairsApp
             InitializeComponent();          
         }
 
+        //Getters
         public string getFirstName()
         {
             return txtBxFirstName.Text;
@@ -149,6 +151,81 @@ namespace HomeAffairsApp
             }
         }
 
+        //Setters
+        public void setName(string aName)
+        {
+            txtBxFirstName.Text = aName;
+        }
+
+        public void setLastname(string aLastName)
+        {
+            txtBxLastName.Text = aLastName;
+        }
+
+        public void setAddress(string aAddress)
+        {
+            txtBxAddress.Text = aAddress;
+        }
+
+        public void setCity(string aCity)
+        {
+            cmBxCity.SelectedIndex = int.Parse(aCity);
+        }
+        public void setProvince(string aPrivince)
+        {
+            cmBxProvince.SelectedIndex = int.Parse(aPrivince);
+        }
+
+        public void setDay(string aDay)
+        {
+            cmBxDay.SelectedItem = aDay;
+        }
+
+        public void setMonth(string aMonth)
+        {
+            cmBxMonth.SelectedItem = aMonth;
+        }
+
+        public void setYear(string aYear)
+        {
+            cmBxYear.SelectedItem = aYear;
+        }
+
+        public void setRadioMale(bool aMale)
+        {
+            rbMale.Checked = aMale;
+        }
+
+        public void setRadioFemale(bool aFemale)
+        {
+            rbFemale.Checked = aFemale;
+        }
+
+        public void setTelHome(string aTelHome)
+        {
+            txtBxTelHome.Text = aTelHome;
+        }
+
+        public void setTelWork(string aTelWork)
+        {
+            txtBxTelWrk.Text = aTelWork;
+        }
+
+        public void setTelHomeCode(string aTelHomeCode)
+        {
+            txtBxTelCodeHome.Text = aTelHomeCode;
+        }
+
+        public void setTelWorkCode(string aTelWrkCode)
+        {
+            txtBxTelCodeWrk.Text = aTelWrkCode;
+        }
+
+        public void setEmail(string aEmail)
+        {
+            txtBxEmail.Text = aEmail;
+        }
+
         private void ResetMyDate()
         {   
             //First clear the combo box's before populating them
@@ -178,8 +255,9 @@ namespace HomeAffairsApp
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            LoginForm userLogin = new LoginForm();
-            userLogin.ShowDialog();
+            this.Close();
+            //LoginForm userLogin = new LoginForm();
+            //userLogin.ShowDialog();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -192,7 +270,20 @@ namespace HomeAffairsApp
             }
             else
             {
-                this.Hide();
+                //Create a new file and write values from the form
+                try
+                {
+                    StreamWriter loginCreate = new StreamWriter("Login.txt");
+                    loginCreate.WriteLine(txtBxFirstName.Text + "%" + txtBxLastName.Text + "%" + txtBxAddress.Text + "%" +
+                        cmBxCity.SelectedIndex.ToString() + "%" + cmBxProvince.SelectedIndex.ToString() + "%" +
+                        cmBxYear.SelectedIndex.ToString() + "%" + cmBxMonth.SelectedIndex.ToString() + "%" + cmBxDay.SelectedIndex.ToString() +
+                        "%" + rbMale.Checked + "%" + rbFemale.Checked + "%" + txtBxTelHome.Text + "%" + txtBxTelCodeHome.Text + "%" + txtBxTelWrk.Text +
+                        "%" + txtBxTelCodeWrk.Text + "%" + txtBxPassword.Text);
+                    loginCreate.Close();
+                }
+                catch (Exception)
+                {
+                }
             }
         }
 

@@ -130,6 +130,7 @@
             this.cmBxYear.Location = new System.Drawing.Point(185, 244);
             this.cmBxYear.Name = "cmBxYear";
             this.cmBxYear.Size = new System.Drawing.Size(51, 21);
+            this.cmBxYear.Sorted = true;
             this.cmBxYear.TabIndex = 7;
             this.cmBxYear.SelectedIndexChanged += new System.EventHandler(this.cmBxYear_SelectedIndexChanged);
             // 
@@ -172,7 +173,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(155, 510);
+            this.btnRegister.Location = new System.Drawing.Point(155, 491);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(95, 35);
             this.btnRegister.TabIndex = 14;
@@ -183,11 +184,11 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(260, 510);
+            this.btnCancel.Location = new System.Drawing.Point(260, 491);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(95, 35);
             this.btnCancel.TabIndex = 15;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Exit";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -324,6 +325,7 @@
             this.txtBxPassword.Name = "txtBxPassword";
             this.txtBxPassword.Size = new System.Drawing.Size(200, 20);
             this.txtBxPassword.TabIndex = 26;
+            this.txtBxPassword.UseSystemPasswordChar = true;
             // 
             // txtBxRepeatPw
             // 
@@ -331,6 +333,7 @@
             this.txtBxRepeatPw.Name = "txtBxRepeatPw";
             this.txtBxRepeatPw.Size = new System.Drawing.Size(201, 20);
             this.txtBxRepeatPw.TabIndex = 27;
+            this.txtBxRepeatPw.UseSystemPasswordChar = true;
             // 
             // lbl
             // 
@@ -414,6 +417,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 551);
+            this.ControlBox = false;
             this.Controls.Add(this.txtBxTelCodeWrk);
             this.Controls.Add(this.txtBxTelCodeHome);
             this.Controls.Add(this.lblCodeWrk);
